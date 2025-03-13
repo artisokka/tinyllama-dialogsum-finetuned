@@ -9,6 +9,24 @@ This project demonstrates how to fine-tune the TinyLlama-1.1B-Chat-v1.0 model to
 ## Model on HuggingFace
 ![HuggingFace model page for Tinyllama Diagsum](image.png)
 
+## Error fixes applied (available within notebook)
+ERROR FIX:
+```
+RuntimeError: Input tensors need to be on the same GPU, but found the following tensor and device combinations: [(torch.Size([1, 3276800]), device(type='cuda', index=1)), (torch.Size([102400]), device(type='cuda', index=0)), (torch.Size([2560, 2560]), device(type='cuda', index=1))]
+```
+Fixed by appending the following code block to force resource allocation on the same device (GPU 0): bitsandbytes limitation
+
+ERROR FIX: Changed use_auth_token to token
+```
+/usr/local/lib/python3.10/dist-packages/transformers/models/auto/auto_factory.py:471: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+```
+FIX: 
+- Changed training args to match instructions
+- Added label names
+
+ERROR FIX: Changed file path to checkpoint-500
+
 ## Contents
 
 * `tinyllama_dialogue_summarization.ipynb`: A Kaggle notebook containing the code for fine-tuning TinyLlama and evaluating its performance.
