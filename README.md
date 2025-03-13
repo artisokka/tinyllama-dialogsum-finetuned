@@ -6,6 +6,9 @@ This repository contains a Kaggle notebook for fine-tuning the TinyLlama-1.1B mo
 
 This project demonstrates how to fine-tune the TinyLlama-1.1B-Chat-v1.0 model to generate concise and accurate summaries from conversational text. It leverages the PEFT library with Low-Rank Adaptation (LoRA) to efficiently adapt the pre-trained model, reducing computational overhead and memory requirements. The training is performed on a dialogue summarization dataset.
 
+## Model on HuggingFace
+![HuggingFace model page for Tinyllama Diagsum](image.png)
+
 ## Contents
 
 * `tinyllama_dialogue_summarization.ipynb`: A Kaggle notebook containing the code for fine-tuning TinyLlama and evaluating its performance.
@@ -67,10 +70,6 @@ The model's performance is evaluated using ROUGE scores.
 ## License
 
 This project is licensed under the MIT License.
-
-## Author
-
-[Your Name/GitHub Username]
 
 ## Acknowledgments
 
